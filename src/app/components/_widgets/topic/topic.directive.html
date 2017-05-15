@@ -1,0 +1,12 @@
+<div class="topic-widget" id="topic-widget">
+    <div class="tw-images-cnt">
+        <div class="tw-image " ng-repeat="album in albums">
+            <a href="#" ng-click="goToAlbumPage(album._id)">
+                <img ng-src={{album.image}}>
+            </a>
+        </div>
+        <div class="centered" ng-show="albumsLoading">
+                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                </div>
+    </div>
+</div>

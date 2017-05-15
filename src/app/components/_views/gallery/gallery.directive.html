@@ -1,0 +1,39 @@
+<div class="container-fluid row">
+    <div class="gallery-page container row">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                <!--TODO: use instead ng-repeat compile with angular-->
+
+                <div class="gp-content">
+                    <div class="gp-title" ng-show="::image.title">
+                        <h3 ng-bind="::image.title">
+                            <!--<a  ui-sref="gallery({imageId: image._id})"></a>-->
+                        </h3>
+                    </div>
+
+                    <div class="gp-image" ng-show="::image.url">
+                        <img ng-show="::image.url" src="{{image.url}}">
+                    </div>
+
+                    <div class="gp-description" ng-show="::image.description">
+                        <p ng-bind="::image.description"></p>
+                    </div>
+
+                    <div class="" style="margin: 10px auto;" ng-if="album.author">
+                        <no-ad></no-ad>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="gp-content">
+                    <topic-widget></topic-widget>
+                </div>
+                <div class="gp-content" ng-if="album.author">
+                    <no-ad></no-ad>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

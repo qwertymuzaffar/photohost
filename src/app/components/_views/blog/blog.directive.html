@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="blog container row">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+            <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage.error">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> <span ng-bind="flashMessage.error"></span>
+            </div>
+
+            <div ng-show="post" class="b-idPost-cnt">
+                <h3 ng-bind="post.title | ellipsis: 150 : 1"></h3>
+                <p class="b-post-desc" ng-bind-html="post.htmlText"></p>
+                <p class="b-post-date">
+                    <!--Автор: <span ng-bind="post.author"></span>-->
+                    <!--Дата: -->
+                    <span ng-bind="post.createdDate | date:'medium'"></span>
+                    <!--Просмотров: <span ng-bind="post.views"></span>-->
+                </p>
+            </div>
+
+            <div ng-show="posts" class="b-posts-cnt">
+                <div class="b-post" ng-repeat="post in posts track by $index" ng-click="goToPost(post._id)">
+                    <div class="b-post-image" ng-if="post.image">
+                        <img ng-src="{{post.image}}" alt="{{post.title}}">
+                    </div>
+                    <div class="b-post-ctn">
+                        <h3 ng-bind="post.title | ellipsis: 80 : 1"></h3>
+                        <p class="b-post-desc" ng-bind-html="post.htmlText | ellipsis: 200 : 1"></p>
+                        <p class="b-post-date">
+                            <!--Автор: <span ng-bind="post.author"></span>-->
+                            <!--Дата: -->
+                            <span ng-bind="post.createdDate | date:'medium'"></span>
+                            <!--Просмотров: <span ng-bind="post.views"></span>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="centered" ng-show="postLoading">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="b-no-ad">
+                <topic-widget></topic-widget>
+            </div>
+            <div class="b-no-ad">
+                <no-ad></no-ad>
+            </div>
+        </div>
+    </div>
+</div>

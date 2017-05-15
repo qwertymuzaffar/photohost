@@ -1,0 +1,50 @@
+<div class="feedback-form form-horizontal">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage.error">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> <span ng-bind="flashMessage.error"></span>
+            </div>
+            <div class="alert alert-success alert-dismissible" role="alert" ng-show="flashMessage.success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span ng-bind="flashMessage.success"></span>
+            </div>
+            <form name="feedbackForm" ng-submit="sendFeedback()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="name" class="control-label">Имя:</label>
+
+                            <div>
+                                <input type="text" class="form-control" id="name" ng-model="feedback.name"
+                                       minlength="2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="control-label">E-Mail:</label>
+
+                            <div>
+                                <input type="email" class="form-control" id="email" ng-model="feedback.email"
+                                       required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback" class="control-label">Сообщение:</label>
+
+                    <div>
+                    <textarea style="resize: none;" class="form-control" rows="5" id="feedback"
+                              ng-model="feedback.message" minlength="5"
+                              required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div style="text-align: right;">
+                        <button type="submit" class="btn btn-primary" ng-disabled="loading">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,208 @@
+<div class="row container-fluid">
+    <div class="album-page container row">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                <!--TODO: use instead ng-repeat compile with angular-->
+
+                <div class="ap-content" ng-repeat="image in images track by $index">
+                    <div class="ap-title" ng-show="::image.title">
+                        <h3 ng-bind="::image.title">
+                            <!--<a  ui-sref="gallery({imageId: image._id})"></a>-->
+                        </h3>
+                    </div>
+
+                    <div class="ap-image" ng-show="::image.url">
+                        <img ng-show="::image.url.urlImg" src="{{image.url.urlImg}}">
+                    </div>
+
+                    <div class="ap-image-urls">
+
+                        <div class="form-group">
+                            <label for="viewImg-{{$index}}">Страница просмотра картинки:</label>
+                            <div class="view-img">
+                                <input id="viewImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.viewImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="view-img-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#viewImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urlImg-{{$index}}">Прямая ссылка на картинку:</label>
+                            <div class="urlImg">
+                                <input id="urlImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.urlImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="urlImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#urlImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bbImg-{{$index}}">BB-код картинки:</label>
+                            <div class="bbImg">
+                                <input id="bbImg-{{$index}}" type="text" class="form-control" ng-model="image.url.bbImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="bbImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#bbImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="htmlImg-{{$index}}">HTML-код картинки:</label>
+                            <div class="htmlImg">
+                                <input id="htmlImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.htmlImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="htmlImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#htmlImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urlPrevImg-{{$index}}">URL превью:</label>
+                            <div class="urlPrevImg">
+                                <input id="urlPrevImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.urlPrevImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="urlPrevImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#urlPrevImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bbPrevImg-{{$index}}">BB-код превью+картинка:</label>
+                            <div class="bbPrevImg">
+                                <input id="bbPrevImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.bbPrevImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="bbPrevImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#bbPrevImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="htmlPrevImg-{{$index}}">HTML-код превью+картинка:</label>
+                            <div class="htmlPrevImg">
+                                <input id="htmlPrevImg-{{$index}}" type="text" class="form-control"
+                                       ng-model="image.url.htmlPrevImg"
+                                       onclick="this.select();">
+                            </div>
+                            <div class="htmlPrevImg-btn">
+                                <button class="btn btn-primary" ngclipboard
+                                        data-clipboard-target="#htmlPrevImg-{{$index}}">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ap-content ap-image-urls" ng-show="images.length > 1">
+                    <div class="form-group">
+                        <label for="multiBbImg">BB-код всех картинок:</label>
+                        <div class="multiBbImg">
+                            <textarea id="multiBbImg" class="form-control" rows="1" ng-model="multiBbImg"
+                                      onclick="this.select();"></textarea>
+                        </div>
+                        <div class="multiBbImg-btn">
+                            <button class="btn btn-primary" ngclipboard
+                                    data-clipboard-target="#multiBbImg">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="multiHtmlImg">HTML-код всех картинок:</label>
+                        <div class="multiHtmlImg">
+                        <textarea id="multiHtmlImg" class="form-control" rows="1" ng-model="multiHtmlImg"
+                                  onclick="this.select();"></textarea>
+                        </div>
+                        <div class="multiHtmlImg-btn">
+                            <button class="btn btn-primary" ngclipboard
+                                    data-clipboard-target="#multiHtmlImg">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="multiBbPrevImg">BB-код всех превью+картинок:</label>
+                        <div class="multiBbPrevImg">
+                            <textarea id="multiBbPrevImg" class="form-control" rows="1" ng-model="multiBbPrevImg"
+                                      onclick="this.select();"></textarea>
+                        </div>
+                        <div class="multiBbPrevImg-btn">
+                            <button class="btn btn-primary" ngclipboard
+                                    data-clipboard-target="#multiBbPrevImg">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="multiHtmlPrevImg">HTML-код всех превью+картинок:</label>
+                        <div class="multiHtmlPrevImg">
+                            <textarea id="multiHtmlPrevImg" class="form-control" rows="1" ng-model="multiHtmlPrevImg"
+                                      onclick="this.select();"></textarea>
+                        </div>
+                        <div class="multiHtmlPrevImg-btn">
+                            <button class="btn btn-primary" ngclipboard
+                                    data-clipboard-target="#multiHtmlPrevImg">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="ap-content">
+                    <topic-widget></topic-widget>
+                </div>
+                <div class="ap-content">
+                    <div class="ap-album-urls">
+                        <label for="viewAlbum">Страница просмотра альбома:</label>
+                        <div class="ap-view-album form-group">
+                            <input id="viewAlbum" type="text" class="form-control" ng-model="viewAlbum"
+                                   onclick="this.select();">
+                        </div>
+                        <div class="ap-view-album-btn form-group">
+                            <button class="btn btn-primary" ngclipboard data-clipboard-target="#viewAlbum">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

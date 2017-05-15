@@ -1,0 +1,28 @@
+.gallery-page {
+  .gp-content {
+    background-color: #ecf0f1;
+    border: 1px solid #d3e0e9;
+    margin-bottom: 10px;
+  }
+  .gp-title h3 {
+    word-wrap: break-word;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  .gp-image {
+    background-color: #DDE0E1;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  .gp-description {
+    word-wrap: break-word;
+    padding: 10px 20px 0;
+    margin: 0;
+    p {
+      white-space: pre-wrap;
+    }
+  }
+}

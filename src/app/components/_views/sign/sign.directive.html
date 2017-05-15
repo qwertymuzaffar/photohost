@@ -1,0 +1,87 @@
+<div class="sign-container sign-main inputdemoIcons">
+
+    <div class="sign-container sign-blur-bg"></div>
+    <div class="pop"></div>
+    <p class="logo-text">Fpicture</p>
+    <div class="sign-menu-holder">
+        <button class="sign" ng-click="sign($event)">SignUp</button>
+        <button class="sign sign-button-selected" ng-click="sign($event)">SignIn</button>
+
+
+
+        <!--Sign In Form-->
+        <form ng-submit="signin()" ng-show="!isSignIn">
+            <p class="wsm-p">with social media</p>
+            <span class="input-group-addon sm-container">
+                <i class="fa fa-facebook-official fa-2x" aria-hidden="true" ng-click="OAuth('facebook')"></i>
+                <i class="fa fa-google-plus-square fa-2x" aria-hidden="true" ng-click="OAuth('google')"></i>
+                <i class="fa fa-twitter-square fa-2x" aria-hidden="true" ng-click="OAuth('twitter')"></i>
+                <i class="fa fa-instagram fa-2x" aria-hidden="true" ng-click="OAuth('instagramm')"></i>
+                <i class="fa fa-vk fa-2x" aria-hidden="true" ng-click="OAuth('vk')"></i>
+            </span>
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                <!--<div ng-model="popup.content" popup="popup.options"></div>-->
+                <input class="form-control" data-content="Here"  popup="popup.options" ng-model="user.username" type="text" required autofocus
+                       placeholder="Login">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                <input class="form-control" data-content="Here"  popup="popup.options" ng-model="user.password" type="password" required
+                       placeholder="Password">
+            </div>
+            <div class="checkbox-inline pull-left">
+                <label style="font-weight: normal;">
+                    <input type="checkbox" name="remember" ng-click="rememberMe()"
+                           data-ng-model="remember">
+                    <span>remember</span>
+                </label>
+            </div>
+            <a ui-sref="forgotPassword" class="pull-right">Forgot Password</a>
+            <button  class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+        </form>
+        <!--Sign Up Form-->
+        <form name="register" ng-submit="signup()" ng-show="isSignIn">
+            <div class="form-group">
+                <label for="username" class="control-label">Username:</label>
+
+                <div>
+                    <input  type="text" class="form-control" id="username" required
+                           placeholder="Username" ng-model="user.username" ng-minlength="6">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="control-label">Email:</label>
+
+                <div>
+                    <input type="email" class="form-control" id="email" required
+                           placeholder="Email" ng-model="user.email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Password:</label>
+
+                <div>
+                    <input type="password" class="form-control" id="password" required
+                           placeholder="Password" ng-model="user.password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="verifyPassword" class="control-label">Verify Password:</label>
+
+                <div>
+                    <input type="password" class="form-control" id="verifyPassword" required
+                           placeholder="Verify Password" ng-model="user.verifyPassword">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="">
+                    <button type="submit" class="btn btn-primary"
+                            ng-disabled="register.$invalid || user.password!==user.verifyPassword">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

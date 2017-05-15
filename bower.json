@@ -1,0 +1,28 @@
+{
+  "name": "photohost",
+  "description": "",
+  "authors": [
+    "Abdumalik Abdumalikov <a.abdumalikov92@gmail.com>",
+    "Akmal Sultonov <angular.min.js@gmail.com>",
+    "Isoboy Komilzoda <isoboy@gmail.com>",
+    "Muzaffar Kosimov <muzafarkosimov@gmail.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "src/bower_components"
+  ],
+  "main": "server.js",
+  "dependencies": {
+    "angular": "latest",
+    "angular-animate": "latest",
+    "angular-bootstrap": "latest",
+    "angular-cookies": "latest",
+    "angular-sanitize": "latest",
+    "angular-touch": "latest",
+    "angular-ui-router": "latest",
+    "font-awesome": "^4.6.3",
+    "ngclipboard": "^1.1.1"
+  }
+}

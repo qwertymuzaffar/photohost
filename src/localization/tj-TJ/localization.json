@@ -1,0 +1,27 @@
+{
+  "photohost": "fPicture.ru",
+  "upload": "Илова",
+
+  "signIn": "Дохил",
+  "signOut": "Баромад",
+  "signUp": "Қайд",
+  "userName": "Логин",
+  "password": "Сиркалима",
+  "rememberMe": "Ба хотир",
+  "forgotPassword": "Фаромӯши сиркалима?",
+  "enterYourEmail": "Email-атонро дохил кунед",
+  "sendPassword": "Фиристодани сиркалима",
+  "repeatPassword": "Такрори сиркалима",
+
+  "about": "Мо",
+  "feedback": "Алоқа",
+  "rules": "Қоидаҳо",
+  "blog": "Блог",
+
+  "settings": "Ҷӯркунӣ",
+  "myAlbums": "Наворҳои ман",
+
+  "uploadImage": "Иловаи расм",
+  "startUpload": "Start upload",
+  "pleaseWait": "Мунтазир шавед ..."
+}

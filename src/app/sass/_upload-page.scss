@@ -1,0 +1,28 @@
+.upload-page {
+  .up-content {
+    background-color: #ecf0f1;
+    border: 1px solid #d3e0e9;
+    margin-bottom: 10px;
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+  .up-comment {
+    background-color: #ecf0f1;
+    border: 1px solid #d3e0e9;
+    margin-bottom: 10px;
+  }
+  .up-title h3 {
+    word-wrap: break-word;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  .up-image {
+    background-color: #DDE0E1;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}

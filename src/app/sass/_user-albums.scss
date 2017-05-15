@@ -1,0 +1,67 @@
+.user-albums {
+  padding: 15px;
+
+  .table {
+    td, th {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .ua-album-title {
+    max-width: 200px;
+    word-wrap: break-word;
+  }
+}
+
+.ua-edit-modal {
+  .table {
+    td, th {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+
+.ua-upload-form {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .upload-form-cnt {
+    margin: 15px !important;
+  }
+  .uf-btn-upload {
+    > input[type="file"] {
+      display: none;
+    }
+    font: {
+      size: 25px;
+    }
+    white-space: normal;
+  }
+  .uf-spinner {
+    position: absolute;
+    display: block;
+    z-index: 12756;
+    top: 50%;
+    right: 50%;
+  }
+  .uf-images-table {
+    background-color: #f9f9f9;
+  }
+  .uf-images-table-hidden {
+    opacity: .6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .uf-image-options {
+    max-width: 600px;
+  }
+  .table {
+    td, th {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "photohost",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Muzaffar Kosimov <muzafarkosimov@gmail.com> (http://fpicture.ru)",
+  "contributors": [
+    "Abdumalik Abdumalikov <a.abdumalikov92@gmail.com>",
+    "Akmal Sultonov <angular.min.js@gmail.com>",
+    "Isoboi Komilzoda <isoboy.k@gmail.com>",
+    "Muzaffar Kosimov <muzafarkosimov@gmail.com>"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/qwertymuzafar/photohost.git"
+  },
+  "homepage": "https://bitbucket.org/qwertymuzafar/photohost/overview",
+  "keywords": [
+    "free",
+    "photo",
+    "hosting"
+  ],
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "latest",
+    "compression": "latest",
+    "cookie-parser": "latest",
+    "express": "latest",
+    "morgan": "latest",
+    "prerender-node": "^2.4.0",
+    "serve-favicon": "latest"
+  },
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "latest",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-util": "^3.0.7",
+    "nodemon": "latest"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

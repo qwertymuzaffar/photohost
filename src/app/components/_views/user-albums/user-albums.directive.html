@@ -1,0 +1,114 @@
+<div class="row container-fluid">
+
+    <modal title="Edit Album" visible="showEditModal">
+        <div class="row ua-edit-modal">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="alert alert-success alert-dismissible" role="alert" ng-show="flashMessage.success">
+                    <span ng-bind="flashMessage.success"></span>
+                </div>
+                <div class="form-group">
+                    <label for="albumTitle">Название Альбома</label>
+                    <input type="text" class="form-control" id="albumTitle" ng-model="editAlbum.title"
+                           ng-maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <table class="table table-striped table-bordered table-condensed table-hover"
+                           style="background-color: #f9f9f9;">
+                        <tr ng-repeat="editImg in editImages track by $index">
+                            <td>
+                                <img ng-src="{{editImg.url}}" style="max-width: 80px" alt="img.title"/>
+                            </td>
+                            <td class="">
+                                <div class="form-group">
+                                    <input type="text" ng-maxlength="50" class="form-control" ng-model="editImg.title"
+                                           placeholder="Название">
+                                    <span style="color: #9da9b0;">{{editImg.title.length || 0}} / 50 Знаков</span>
+                                </div>
+                                <div class="form-group">
+                                <textarea type="text" class="form-control" ng-maxlength="1500"
+                                          ng-model="editImg.description"
+                                          placeholder="Описание"></textarea>
+                                    <span style="color: #9da9b0;">{{editImg.description.length || 0}} / 1500 Знаков</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="pull-right form-group">
+                        <button class="btn btn btn-primary" ng-disabled="albumUpdating" ng-click="onUpdate()">
+                            Сохранить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </modal>
+
+    <!--<div class="col-md-12">-->
+    <!--<div class="wrapper ua-upload-form">-->
+    <!--<div class="row centered">-->
+    <!--<div class="col-lg-12 col-md-12 col-sm-12">-->
+    <!--<user-upload-widget></user-upload-widget>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div class="col-md-12">
+        <div class="wrapper user-albums">
+            <div class="row centered">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="user-albums-cnt">
+                        <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage.error">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <strong>Error!</strong> <span ng-bind="flashMessage.error"></span>
+                        </div>
+                        <table class="table table-striped table-bordered table-condensed table-hover"
+                               style="background-color: #f9f9f9;">
+                            <tr>
+                                <th>Картинка</th>
+                                <th>Название</th>
+                                <th>Дата загрузки</th>
+                                <th>Посл. просмотр</th>
+                                <th>Просмотров</th>
+                                <th colspan="2">Операции</th>
+                            </tr>
+                            <tr ng-repeat="album in albums track by $index">
+                                <td>
+                            <span ng-click="goToAlbumPage(album._id)" style="cursor: pointer;">
+                                <img ng-src="{{album.image}}" style="max-width: 80px" alt="::album.title"/>
+                            </span>
+                                </td>
+                                <td class="ua-album-title" ng-bind="album.title"></td>
+                                <td>
+                                    <span ng-bind="album.createdDate | date:'medium'"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="album.lastViewed | date:'medium'"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="album.views"></span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-success" ng-click="onEditAlbum(album)">
+                                        <span><i class="fa fa-pencil-square-o"></i></span>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" ng-click="deleteAlbum(album._id)">
+                                        <span><i class="fa fa-trash-o"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="centered" ng-show="albumsLoading">
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

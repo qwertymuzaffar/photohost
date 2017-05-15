@@ -1,0 +1,62 @@
+<div class="form-signup form-horizontal">
+    <div class="row centered">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage.error">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> <span ng-bind="flashMessage.error"></span>
+            </div>
+            <div class="alert alert-success alert-dismissible" role="alert" ng-show="flashMessage.success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <span ng-bind="flashMessage.success"></span>
+            </div>
+            <form name="register" ng-submit="signup()">
+                <div class="form-group">
+                    <div class="col-xs-4 col-sm-3 control-label">
+                        <label for="username" ng-bind="localiz.userName + ':'"></label>
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        <input type="text" class="form-control" id="username" required
+                               placeholder="{{localiz.userName}}" ng-model="user.username" ng-minlength="6">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-4 col-sm-3 control-label">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        <input type="email" class="form-control" id="email" required
+                               placeholder="Email" ng-model="user.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-4 col-sm-3 control-label">
+                        <label for="password" ng-bind="localiz.password + ':'"></label>
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        <input type="password" class="form-control" id="password" required
+                               placeholder="{{localiz.password}}" ng-model="user.password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-4 col-sm-3 control-label">
+                        <label for="verifyPassword"
+                               ng-bind="localiz.repeatPassword + ':'"></label>
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        <input type="password" class="form-control" id="verifyPassword" required
+                               placeholder="{{localiz.repeatPassword}}" ng-model="user.verifyPassword">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div style="float: right; margin-right: 15px;">
+                        <button type="submit" class="btn btn-primary" ng-bind="localiz.signUp"
+                                ng-disabled="register.$invalid || user.password!==user.verifyPassword || loading">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

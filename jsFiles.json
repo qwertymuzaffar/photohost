@@ -1,0 +1,48 @@
+[
+  "src/app/shared/photohost.util.js",
+  "src/app/shared/photohost.filters.js",
+  "src/app/app.js",
+
+  "src/app/components/_views/about/about.directive.js",
+  "src/app/components/_views/album/album.directive.js",
+  "src/app/components/_views/gallery/gallery.directive.js",
+  "src/app/components/_views/home/home.directive.js",
+  "src/app/components/_views/rules/rules.directive.js",
+  "src/app/components/_views/sign/sign.directive.js",
+  "src/app/components/_views/sign-in/sign-in.directive.js",
+  "src/app/components/_views/blog/blog.directive.js",
+  "src/app/components/_views/upload/upload.directive.js",
+  "src/app/components/_views/user-albums/user-albums.directive.js",
+
+  "src/app/components/_widgets/feedback/feedback.directive.js",
+  "src/app/components/_widgets/forgot-password/forgot-password.directive.js",
+  "src/app/components/_widgets/no-ad/no-ad.directive.js",
+  "src/app/components/_widgets/topic/topic.directive.js",
+  "src/app/components/_widgets/upload/upload.directive.js",
+  "src/app/components/_widgets/user-upload/user-upload.directive.js",
+
+  "src/app/components/photohost/photohost.directive.js",
+  "src/app/components/sign-in/sign-in.directive.js",
+  "src/app/components/sign-up/sign-up.directive.js",
+  "src/app/components/modal/modal.directive.js",
+  "src/app/components/topic/topic.directive.js",
+  "src/app/components/ui-footer/ui-footer.directive.js",
+  "src/app/components/ui-header/ui-header.directive.js",
+  "src/app/components/page-title/page-title.directive.js",
+
+  "src/app/components/_widgets/feedback/feedback.service.js",
+
+  "src/app/components/_views/album/album.service.js",
+  "src/app/components/_views/gallery/gallery.service.js",
+  "src/app/components/_views/user-albums/user-albums.service.js",
+  "src/app/components/_views/blog/blog.service.js",
+
+  "src/app/shared/auth-interceptor.service.js",
+  "src/app/shared/auth.service.js",
+  "src/app/shared/analytics.service.js",
+  "src/app/shared/config.service.js",
+  "src/app/shared/localization.service.js",
+  "src/app/shared/remember.service.js",
+  "src/app/shared/topic.service.js",
+  "src/app/shared/user.service.js"
+]

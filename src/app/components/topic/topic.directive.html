@@ -1,0 +1,17 @@
+<div class="topic-form-cnt">
+    <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <strong>Error!</strong> <span ng-bind="flashMessage"></span>
+    </div>
+    <div class="tf-images-cnt">
+        <div class="tf-image " ng-repeat="album in albums">
+            <a ui-sref="album({albumId: album._id})">
+                <img ng-src={{album.image}}>
+            </a>
+        </div>
+        <div class="centered" ng-show="albumsLoading">
+                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                </div>
+    </div>
+</div>

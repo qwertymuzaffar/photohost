@@ -1,0 +1,29 @@
+{
+  "mainTitle": "Photohost fPicture",
+
+  "photohost": "fPicture.ru",
+  "upload": "Upload",
+
+  "signIn": "Sign In",
+  "signOut": "Sign Out",
+  "signUp": "Sign Up",
+  "userName": "Username",
+  "password": "Password",
+  "rememberMe": "Remember me",
+  "forgotPassword": "Forgot password?",
+  "enterYourEmail": "Enter Your Email",
+  "sendPassword": "Send password",
+  "repeatPassword": "Repeat",
+
+  "about": "About",
+  "feedback": "Feedback",
+  "rules": "Rules",
+  "blog": "Blog",
+
+  "settings": "Settings",
+  "myAlbums": "My Albums",
+
+  "uploadImage": "Upload image",
+  "startUpload": "Start upload",
+  "pleaseWait": "Please wait..."
+}

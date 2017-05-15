@@ -1,0 +1,86 @@
+.sign-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  bottom: 60px;
+  color: white;
+
+}
+
+.sign-main {
+  background-image: url(../../img/sign-bg.png);
+  color: white;
+}
+
+.sign-blur-bg {
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+
+}
+
+//.sign-container p {
+//
+//}
+
+.logo-text {
+  color: white;
+  position: relative;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.sign-menu-holder {
+  position: relative;
+  width: 25%;
+  height: 70%;
+  text-align: center;
+  margin: 0 auto;
+  //background-color: rgba(22,160, 133,0.2);
+}
+
+.sign-button-selected {
+  border-bottom: 1px solid white !important;
+  color: white !important;
+
+}
+
+.sign {
+  width: 50%;
+  float: left;
+  border: transparent;
+  height: 50px;
+  background-color: transparent;
+  font-size: large;
+  outline: none;
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sm-container {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0 20px 0;
+  border: 0;
+  > i {
+    cursor: pointer;
+  }
+}
+
+.sm-container i {
+  margin: 0 5px;
+}
+
+.wsm-p {
+  display: inline-block;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: larger;
+}

@@ -1,0 +1,93 @@
+.album-page {
+  .ap-content {
+    background-color: #ecf0f1;
+    border: 1px solid #d3e0e9;
+    margin-bottom: 10px;
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+  .ap-title h3 {
+    word-wrap: break-word;
+    padding: 10px 20px;
+    margin: 0;
+    a {
+      color: #555;
+    }
+  }
+  .ap-image {
+    background-color: #DDE0E1;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  .ap-description {
+    word-wrap: break-word;
+    padding: 10px 20px 0;
+    margin: 0;
+    p {
+      white-space: pre-wrap;
+    }
+  }
+  .ap-noad {
+    margin: 10px auto;
+  }
+  .ap-image-urls {
+    padding: 10px;
+    input, button, textarea {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    label {
+      display: block;
+    }
+    .view-img, .urlImg, .bbImg, .htmlImg,
+    .urlPrevImg, .bbPrevImg, .htmlPrevImg {
+      float: left;
+      width: 90%;
+    }
+    .multiBbImg, .multiHtmlImg, .multiBbPrevImg, .multiHtmlPrevImg {
+      float: left;
+      width: 90%;
+    }
+    .multiBbImg-btn, .multiHtmlImg-btn, .multiBbPrevImg-btn, .multiHtmlPrevImg-btn {
+      button {
+        border-radius: 0;
+      }
+    }
+  }
+  .ap-album-urls {
+    padding: 10px;
+    margin: 0 auto;
+    input, button {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+    .ap-view-album {
+      float: left;
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .album-page {
+    .ap-image-urls {
+      .view-img, .urlImg, .bbImg, .htmlImg, .urlPrevImg, .bbPrevImg, .htmlPrevImg {
+        width: 85%;
+      }
+      .multiBbImg, .multiHtmlImg, .multiBbPrevImg, .multiHtmlPrevImg {
+        width: 85%;
+      }
+    }
+    .ap-album-urls {
+      .ap-view-album {
+        width: 85%;
+      }
+    }
+  }
+}

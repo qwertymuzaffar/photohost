@@ -1,0 +1,49 @@
+.upload-form {
+  margin-top: 15px;
+  .upload-form-cnt {
+    margin: 20px !important;
+  }
+  .uf-btn-upload {
+    > input[type="file"] {
+      display: none;
+    }
+    font: {
+      size: 25px;
+    }
+    white-space: normal;
+  }
+  .uf-spinner {
+    position: absolute;
+    display: block;
+    z-index: 12756;
+    top: 50%;
+    right: 50%;
+  }
+  .uf-images-table {
+    background-color: #f9f9f9;
+    td, th {
+      vertical-align: middle;
+      text-align: center;
+    }
+
+  }
+  .uf-images-table-hidden {
+    opacity: .6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .uf-images-title {
+    max-width: 200px;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 360px) {
+  .upload-form {
+    .uf-images-title {
+      max-width: 100px;
+    }
+  }
+}

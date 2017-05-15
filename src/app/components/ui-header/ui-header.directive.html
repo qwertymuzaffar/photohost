@@ -1,0 +1,71 @@
+<div class="row ui-header">
+    <modal title="Войти" visible="showSignInModal">
+        <sign-in></sign-in>
+    </modal>
+    <modal title="Регистрация" visible="showSignUpModal">
+        <sign-up></sign-up>
+    </modal>
+    <modal title="Обратняя Связь" visible="showFeedbackModal">
+        <feedback></feedback>
+    </modal>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="home"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false"><i class="fa fa-list fa-lg"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a ui-sref="rules" ng-bind="localiz.rules"></a></li>
+                                <li><a ui-sref="about" ng-bind="localiz.about"></a></li>
+                                <li><a ui-sref="blog" ng-bind="localiz.blog"></a></li>
+                                <li><a href="#" ng-click="feedback()" ng-bind="localiz.feedback"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-if="!config.isLoggedIn">
+                            <a class="smothScroll" ng-click="signUp()" href="#" ng-bind="localiz.signUp"></a>
+                        </li>
+                        <li ng-if="!config.isLoggedIn">
+                            <a class="smothScroll" ng-click="signIn()" href="#" ng-bind="localiz.signIn"></a>
+                        </li>
+                        <li class="dropdown" ng-if="config.isLoggedIn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false"> {{config.displayName}}<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <!--<li><a ui-sref="profile" ng-bind="localiz.settings"></a></li>-->
+                                <li><a ui-sref="userAlbums" ng-bind="localiz.myAlbums"></a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" ng-click="signOut();" class="smothScroll" ng-bind="localiz.signOut"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false"><i class="fa fa-globe"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" ng-click="onChangeLanguage('ru-RU')">Русский</a></li>
+                                <li><a href="#" ng-click="onChangeLanguage('en-US')">English</a></li>
+                                <!--<li><a href="#" ng-click="onChangeLanguage('tj-TJ')">Тоҷикӣ</a></li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+</div>

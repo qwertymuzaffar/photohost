@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="container wrapper form-signin">
+        <div class="row centered">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage.error">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <strong>Error!</strong> <span ng-bind="flashMessage.error"></span>
+                </div>
+                <form ng-submit="signin()" class="form-signin-cnt">
+                    <h3>Вход в систему</h3>
+                    <div class="input-group margin-bottom-sm">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                        <input class="form-control" type="text" required autofocus ng-model="user.username"
+                               placeholder="Логин">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                        <input class="form-control" type="password" required ng-model="user.password"
+                               placeholder="Пароль">
+                    </div>
+                    <div class="checkbox-inline pull-left">
+                        <label style="font-weight: normal;">
+                            <input type="checkbox" name="remember" data-ng-click="rememberMe()"
+                                   data-ng-model="remember">
+                            <span>Запомнить меня</span>
+                        </label>
+                    </div>
+                    <a ui-sref="forgotPassword" class="pull-right">Забыли пароль?</a>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

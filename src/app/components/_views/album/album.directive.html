@@ -1,0 +1,45 @@
+<div class="row container-fluid">
+    <div class="album-page container row">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                <div class="alert alert-warning alert-dismissible" role="alert" ng-show="flashMessage">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <strong>Error!</strong> <span ng-bind="flashMessage"></span>
+                </div>
+
+                <!--TODO: use instead ng-repeat compile with angular-->
+
+                <div class="ap-content" ng-repeat="image in images track by $index">
+                    <div class="ap-title" ng-show="image.title">
+                        <h3>
+                            <a href="#" ui-sref="gallery({imageId: image._id})" ng-bind="image.title"></a>
+                        </h3>
+                    </div>
+
+                    <div class="ap-image" ng-show="image.url">
+                        <img ng-show="image.url" src="{{image.url}}">
+                    </div>
+
+                    <div class="ap-description" ng-show="image.description">
+                        <p ng-bind="image.description"></p>
+                    </div>
+
+                    <div class="ap-noad" ng-if="$index < 3 && album.author">
+                        <no-ad></no-ad>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="ap-content">
+                    <topic-widget></topic-widget>
+                </div>
+                <div class="ap-content" ng-if="album.author">
+                    <no-ad></no-ad>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
